@@ -24,6 +24,7 @@
     </nav>
     <main>
         <div class="section1">
+            <div class="blackscreen"></div>
             <div>
                 <h1>STAY PREPARED, STAY SAFE</h1>
                 <p>Enhance your disaster readiness with real-time alerts,educational resouces and community support</p>
@@ -34,47 +35,95 @@
                 <div class="weather-container">
                     <div>
                         <h2>Weather Forecast</h2>
-                        <button id="show-search-btn">Check today's weather</button>
-                    </div>
+                        <div class="btn-container">
+                            <button id="your-weather" class="weather1">Check weather of your current location</button>
+                            <button id="show-search-btn" class="weather1">Check weather across globe
+                                
+                            </button>
 
-                    <div id="weather-search" class="weather-search" style="display: none;">
-                        <input type="text" class="input-box" placeholder="Enter city name">
-                        <button id="searchbtn">Search</button>
-                    </div>
-
-
-                    <div class="location-not-found" style="display: none">Location not found</div>
-                    <div class="weather-body" style="display: none">
-                        <img class="weather-img" src="" alt="Weather Icon">
-                        <div>
-                            <h3 class="temperature"></h3>
-                            <p class="description"></p>
-                            <p id="humidity"></p>
-                            <p id="wind-speed"></p>
+                            <div id="weather-search" class="weather-search" style="display: none">
+                                <input type="text" class="input-box" placeholder="Enter city name">
+                                <button id="searchbtn">Search</button>
+                            </div>
+        
+        
+                            <div class="location-not-found" style="display: none">Location not found</div>
+                            <div class="weather-body" style="display: none">
+                                <img class="weather-img" src="" alt="Weather Icon">
+                                <div class="container-2">
+                                    <h1 id="name"></h1>
+                                    <h3 class="temperature"></h3>
+                                    <p class="description"></p>
+                                    <p id="humidity"></p>
+                                    <p id="wind-speed"></p>
+                                </div>
+                            </div>
                         </div>
+                        
                     </div>
+
+                    
                 </div>
             </section>
+        </div>
         </div>
         <div class="section3" id="section3">
             <h1>Real-Time Alert</h1>
             <p>Get instent alerts and notification about imidiat disaster.</p>
         </div>
-        <div class="section5">
-
+        <div class="infoup">                <h2>Deep Insights into Ongoing Disasters in India</h2>
         </div>
-        <div><h1>Education</h1></div>
-        <div class="section4">
+        <div class="section5">
+            <section id="disaster-insights" class="insights-section">
+                <div class="container">
+                    <div class="card-grid">
+                        <div class="insight-card" >
+                            <h3>Monsoon Mayhem: A Perennial Problem</h3>
+                            <p>Intensity and unpredictability: While monsoons are essential for India's agriculture, their intensity and unpredictability have been increasing. This leads to flash floods, landslides, and waterlogging in urban areas.</p>
+                            <p>Urban infrastructure challenges: Rapid urbanization without adequate drainage systems and flood control measures exacerbates the monsoon impact, leading to significant property damage and loss of life.</p>
+                            <p>Agricultural distress: Erratic rainfall patterns disrupt sowing cycles, leading to crop failures and impacting the livelihoods of millions of farmers.</p>
+                        </div>
             
+                        <div class="insight-card" >
+                            <h3>Cyclonic Threats: Coastal Vulnerability</h3>
+                            <p>Frequent occurrences: India's long coastline is prone to cyclonic disturbances, with severe cyclones making landfall every few years.</p>
+                            <p>Early warning systems: While there have been improvements in early warning systems, the challenge lies in effective evacuation and disaster preparedness at the local level.</p>
+                            <p>Livelihood impact: Cyclone-affected coastal communities often face long-term challenges in rebuilding their lives and livelihoods, including fisheries, agriculture, and tourism.</p>
+                        </div>
+            
+                        <div class="insight-card">
+                            <h3>Heatwaves: A Silent Killer</h3>
+                            <p>Increasing frequency and severity: Heatwaves have become more frequent and intense, particularly in northern and central India.</p>
+                            <p>Vulnerable populations: The elderly, children, and outdoor workers are most at risk.</p>
+                            <p>Health implications: Heat-related illnesses, such as heatstroke, dehydration, and respiratory problems, pose significant health challenges.</p>
+                        </div>
+            
+                        <div class="insight-card">
+                            <h3>Landslides: Himalayan Hazard</h3>
+                            <p>Geo-ecological factors: The Himalayas are prone to landslides due to factors like steep slopes, heavy rainfall, deforestation, and seismic activity.</p>
+                            <p>Infrastructure vulnerability: Roads, railways, and hydroelectric projects in the region are at risk, leading to disruptions in transportation and power supply.</p>
+                            <p>Community resilience: Building resilient communities through early warning systems, land-use planning, and disaster preparedness is crucial.</p>
+                        </div>
+            
+                        <div class="insight-card" >
+                            <h3>Drought: A Silent Crisis</h3>
+                            <p>Agricultural backbone: India's agriculture is heavily dependent on rainfall, making it vulnerable to droughts.</p>
+                            <p>Water scarcity: Droughts lead to acute water scarcity, impacting both rural and urban populations.</p>
+                            <p>Livelihood challenges: Farmers and rural communities are particularly affected, with livestock losses and migration becoming common coping mechanisms.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="education"><h1>Education</h1></div>
+        <div class="section4">
             <div class="card">
                 <img class="img"
                     src="https://imgs.search.brave.com/iEjblCk1h3m6vaLHtY2bZfoGIxwMIGSdf9Fswc36ieE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L3VI/Wnk5eW5RQnZLRndz/dlp2U01keDQtMzIw/LTgwLmpwZw"
                     alt="Earthquake">
                 <h2>Earthquake</h2>
-                <p>An earthquake is a sudden, rapid shaking of the ground caused by the shifting of rocks deep
-                    underneath the
-                    earth’s surface. Earthquakes can cause fires, tsunamis, landslides, or avalanches. While they can
-                    happen
+                <p>An earthquake is a sudden, rapid shaking of the ground caused by the shifting of rocks deep underneath the
+                    earth’s surface. Earthquakes can cause fires, tsunamis, landslides, or avalanches. While they can happen
                     anywhere without warning, areas at higher risk for earthquakes.</p>
                 <h4>What To Do When Facing an Earthquake</h4>
                 <ul>
@@ -82,19 +131,17 @@
                     <li>If you are in a car, pull over and stop. Set your parking brake.</li>
                     <li>If you are inside, stay and do not run outside and avoid doorways.</li>
                     <li>If you are in bed, turn face down and cover your head and neck with a pillow.</li>
-                    <li>If you are in a damaged building, go outside and quickly move away from the building. And Do not
-                        enter
+                    <li>If you are in a damaged building, go outside and quickly move away from the building. And  Do not enter
                         damaged buildings.</li>
                 </ul>
             </div>
-
+        
             <div class="card">
                 <img class="img"
                     src="https://imgs.search.brave.com/CnTwrFOX6qutYcDylG9k4FkvJCaPhU6FmX2ipBQEKhc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLmd1/aW0uY28udWsvaW1n/L21lZGlhL2QxNGY1/OTcxN2VmOTQ1ZjU2/OTA1NWI4MTc3M2I2/ZTczYzc5NzdkN2Yv/MF8wXzMwMDBfMTk4/MS9tYXN0ZXIvMzAw/MC5qcGc_d2lkdGg9/MzAwJnF1YWxpdHk9/ODUmYXV0bz1mb3Jt/YXQmZml0PW1heCZz/PTI4YTk5Njc3NzA0/Yjk1MWFmMTQxZTE4/MjI4ZDdjMjU1"
                     alt="Hurricane">
                 <h2>Hurricane</h2>
-                <p>A hurricane is a type of storm called a tropical cyclone, which forms over tropical or subtropical
-                    waters. A
+                <p>A hurricane is a type of storm called a tropical cyclone, which forms over tropical or subtropical waters. A
                     tropical cyclone with winds of 74 miles per hour or greater is usually accompanied by rain,
                     thunder, and lightning, and sometimes moves into temperate latitudes.</p>
                 <h4>What to do during a Hurricane</h4>
@@ -102,59 +149,107 @@
                     <li>Avoid driving or going outdoors during a storm. Flooding and damaging winds can make traveling
                         dangerous.</li>
                     <li>Stay indoors and away from windows.</li>
-                    <li>Look before you step. After a hurricane or flood, the ground and floors can be covered with
-                        debris,
+                    <li>Look before you step. After a hurricane or flood, the ground and floors can be covered with debris,
                         including broken bottles and nails.</li>
                     <li>Stay away from downed utility wires. Always assume a downed power line is live.</li>
                     <li>If your home or property is damaged, take photos or videos to document damage, and contact your
                         insurance company.</li>
                 </ul>
             </div>
-
+        
             <div class="card">
                 <img class="img"
                     src="https://imgs.search.brave.com/jqFtYwktWaILLdVyZlF19M4Mp3JM0kwVIvCWrWl5pR8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by92/aWV3LXdpbGRmaXJl/LWJ1cm5pbmctbmF0/dXJlXzIzLTIxNTA3/ODkxNDYuanBnP3Np/emU9NjI2JmV4dD1q/cGc"
                     alt="Wildfire">
                 <h2>Wildfires</h2>
-                <p>Wildfires (also known as bushfires, brush fires, or forest fires) are large, uncontrolled, and
-                    potentially
-                    destructive fires that can affect both rural and urban areas. They can spread quickly, change
-                    direction, and
+                <p>Wildfires (also known as bushfires, brush fires, or forest fires) are large, uncontrolled, and potentially
+                    destructive fires that can affect both rural and urban areas. They can spread quickly, change direction, and
                     even 'jump' across large distances when embers and sparks are carried by the wind.</p>
                 <h4>What To Do When Facing a Wildfire</h4>
                 <ul>
                     <li>Close all windows and doors to prevent smoke from entering your home.</li>
-                    <li>Do not drive unless you’re ordered to evacuate and have your emergency bag ready to go if
-                        needed.</li>
+                    <li>Do not drive unless you’re ordered to evacuate and have your emergency bag ready to go if needed.</li>
                     <li>Covering vents, windows, and doors with at least ½ inch thick fire-resistant plywood.</li>
                     <li>Placing water-filled buckets around your home to extinguish embers or flames.</li>
                     <li>Moving furniture or flammable materials, including gas grills, away from your home.</li>
                 </ul>
             </div>
-
+        
             <div class="card">
                 <img class="img"
                     src="https://imgs.search.brave.com/JgchTSO7-BTAk8kfCE9v3KxMYyJ-1XRXwFgRBy6cF6k/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5ucHIub3JnL2Fz/c2V0cy9pbWcvMjAy/NC8wNC8xOC9nZXR0/eWltYWdlcy0yMTQ3/ODg0NzY4X2N1c3Rv/bS0wMmViMWIxMmZl/ZWE1Y2QwMzkyZjhi/Y2YwMzg4OGM1Njg5/MzAwNWZlLmpwZz9z/PTExMDAmYz01MCZm/PWpwZWc"
                     alt="Flood">
                 <h2>Floods</h2>
-                <p>Flooding is an overflow of water that can range from a few inches deep to fully submerging entire
-                    buildings.
-                    It can occur when rivers and lakes cannot contain excessive rain or snow melt, or when rain cannot
-                    be
-                    absorbed fully into the ground. Flooding can also occur when waterways overflow due to debris or
-                    ice, when
+                <p>Flooding is an overflow of water that can range from a few inches deep to fully submerging entire buildings.
+                    It can occur when rivers and lakes cannot contain excessive rain or snow melt, or when rain cannot be
+                    absorbed fully into the ground. Flooding can also occur when waterways overflow due to debris or ice, when
                     winds from tropical storms.</p>
                 <h4>What To Do When Facing a Flood</h4>
                 <ul>
                     <li>Avoid building in flood-prone areas unless you elevate and reinforce your home.</li>
                     <li>Consider unplugging sensitive electronic equipment before flooding.</li>
-                    <li>Avoid camping or parking along streams, rivers.These areas can flood rapidly and with little
-                        warning.</li>
+                    <li>Avoid camping or parking along streams, rivers.These areas can flood rapidly and with little warning.</li>
                     <li>If you must evacuate your home, take only essential items.</li>
-                    <li>Do not drive around road barriers. Roads and bridges may be washed out or structurally unsound.
-                    </li>
+                    <li>Do not drive around road barriers. Roads and bridges may be washed out or structurally unsound.</li>
                 </ul>
             </div>
+            <div class="card">
+                <img class="img"
+                    src="https://media.istockphoto.com/id/804402298/photo/landslide-erosion-caused-of-earthquake-and-heavy-rain.jpg?s=612x612&w=0&k=20&c=ShK_qVmwfbRAeKeVDRXuVKBso-6rjTKbH2u9-WCUclA="
+                    alt="Landslides">
+                <h2>Landslides</h2>
+                <p>A landslide is the movement of rock, earth, or debris down a sloped section of land. Landslides are often triggered by factors like heavy rainfall, earthquakes, volcanic activity, or human activities such as deforestation and construction. They can occur suddenly and pose significant risks to life and property.</p>
+                <h4>What To Do When Facing a Landslide</h4>
+                <ul>
+                    <li>If you are indoors, move to a higher floor or a safe area away from windows and doors.</li>
+                    <li>If you are outdoors, move away from the path of the landslide as quickly as possible.</li>
+                    <li>If you are driving, avoid driving near steep slopes, especially during or after heavy rainfall.</li>
+                    <li>Be alert to changes in the landscape, such as cracks or bulges in the ground, leaning trees, or tilting utility poles.</li>
+                </ul>
+            </div>    
+            <div class="card">
+                <img class="img"
+                    src="https://media.istockphoto.com/id/611611734/photo/power-of-nature-avalanche-in-the-caucasus.jpg?s=612x612&w=0&k=20&c=plAzD8aUUUL4GWTaF55ACOMT3gwmwFa1x7cDgb_Vx1Y="
+                    alt="Avalanches">
+                <h2>Avalanches</h2>
+                <p>An avalanche is a sudden and rapid flow of snow, ice, and debris down a mountainside. Avalanches can be triggered by natural events like heavy snowfall, earthquakes, or changes in temperature, as well as by human activities such as skiing or snowboarding. They are highly dangerous and can occur without warning.</p>
+                <h4>What To Do When Facing an Avalanche</h4>
+                <ul>
+                    <li>If you are outdoors and see an avalanche approaching, try to move to the side of its path as quickly as possible.</li>
+                    <li>If you are unable to escape, try to grab onto a sturdy object such as a tree to prevent being carried away.</li>
+                    <li>If you are caught in the avalanche, try to "swim" to stay on top of the snow and create an air pocket in front of your face with your hands.</li>
+                    <li>Once the avalanche stops, attempt to dig your way out or signal for help by shouting or using a whistle.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <img class="img"
+                    src="https://media.istockphoto.com/id/177363117/photo/tungurahua-volcano-eruption-long-exposure-with-lava.jpg?s=612x612&w=0&k=20&c=LpJ8OVK4jB_MYJNkS5sCh_w5_7tKzTgjDZNy8OcnsQs="
+                    alt="Volcanic Eruptions">    
+                <h2>Volcanic Eruptions</h2>
+                <p>A volcanic eruption occurs when molten rock, ash, and gases are expelled from a volcano. Eruptions can be explosive and destructive, with the potential to cause widespread damage through lava flows, ashfall, pyroclastic flows, and toxic gases. Volcanic eruptions can also trigger secondary hazards like landslides, tsunamis, and wildfires.</p>
+                <h4>What To Do When Facing a Volcanic Eruption</h4>
+                <ul>
+                    <li>If you are indoors, stay inside to avoid ashfall and close all windows, doors, and ventilation to prevent ash from entering your home.</li>
+                    <li>If you are outdoors, seek shelter immediately to avoid falling ash and debris.</li>
+                    <li>If you are driving, pull over and stop. Avoid driving through ashfall, as it can damage your vehicle and reduce visibility.</li>
+                    <li>Wear long-sleeved clothing, a mask, and goggles to protect yourself from ash and toxic gases.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <img class="img"
+                    src="https://media.istockphoto.com/id/528612219/photo/death-valley-extreme-heat-danger.jpg?s=612x612&w=0&k=20&c=aeH8bfga89hV4VcN-dDf8ZJuq3GWS44-36IGWewqma4="
+                    alt="Heat Waves">
+                <h2>Heat Waves</h2>
+                <p>A heat wave is a prolonged period of excessively hot weather, which may be accompanied by high humidity. Heat waves can lead to severe health issues such as heat exhaustion, heatstroke, and dehydration, and they can exacerbate pre-existing medical conditions. Prolonged exposure to extreme heat can also lead to wildfires, power outages, and infrastructure damage.</p>
+                <h4>What To Do When Facing a Heat Wave</h4>
+                <ul>
+                    <li>Stay indoors during the hottest parts of the day, usually between 10 a.m. and 4 p.m.</li>
+                    <li>If you need to go outside, wear lightweight, light-colored, and loose-fitting clothing, and apply sunscreen to protect yourself from sunburn.</li>
+                    <li>Drink plenty of water throughout the day, even if you don't feel thirsty, to stay hydrated.</li>
+                    <li>Avoid strenuous outdoor activities, especially during the hottest hours.</li>
+                </ul>
+            </div>
+            
         </div>
         
         <div class="section6">
