@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="heading">
+            <h1>Disaster Ready</h1>
+        </div>
+        <ul class="menu">
+            <li><a href="#section2">Weather</a></li>
+            <li><a href="#section3">Alerts</a></li>
+            <li><a href="">Info Hub</a></li>
+            <li><a href="">Education</a></li>
+            <li><a href="">Communication</a></li>
+            <li><a href="">Resources</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="section1">
+            <div>
+                <h1>STAY PREPARED, STAY SAFE</h1>
+                <p>Enhance your disaster readiness with real-time alerts,educational resouces and community support</p>
+            </div>
+        </div>
+        <div class="section2" id="section2">
+            <section id="weather" class="section weather-section">
+                <div class="weather-container">
+                    <div>
+                        <h2>Weather Forecast</h2>
+                        <button id="show-search-btn">Check today's weather</button>
+                    </div>
+
+                    <div id="weather-search" class="weather-search" style="display: none;">
+                        <input type="text" class="input-box" placeholder="Enter city name">
+                        <button id="searchbtn">Search</button>
+                    </div>
+
+
+                    <div class="location-not-found" style="display: none">Location not found</div>
+                    <div class="weather-body" style="display: none">
+                        <img class="weather-img" src="" alt="Weather Icon">
+                        <div>
+                            <h3 class="temperature"></h3>
+                            <p class="description"></p>
+                            <p id="humidity"></p>
+                            <p id="wind-speed"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="section3" id="section3">
+            <h1>Real-Time Alert</h1>
+            <p>Get instent alerts and notification about imidiat disaster.</p>
+        </div>
+        <div class="section4">
+            <div class="card">
+                <img class="img"
+                    src="https://imgs.search.brave.com/iEjblCk1h3m6vaLHtY2bZfoGIxwMIGSdf9Fswc36ieE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L3VI/Wnk5eW5RQnZLRndz/dlp2U01keDQtMzIw/LTgwLmpwZw"
+                    alt="Earthquake">
+                <h2>Earthquake</h2>
+                <p>An earthquake is a sudden, rapid shaking of the ground caused by the shifting of rocks deep
+                    underneath the
+                    earth’s surface. Earthquakes can cause fires, tsunamis, landslides, or avalanches. While they can
+                    happen
+                    anywhere without warning, areas at higher risk for earthquakes.</p>
+                <h4>What To Do When Facing an Earthquake</h4>
+                <ul>
+                    <li>If you are outdoors, stay outdoors away from buildings.</li>
+                    <li>If you are in a car, pull over and stop. Set your parking brake.</li>
+                    <li>If you are inside, stay and do not run outside and avoid doorways.</li>
+                    <li>If you are in bed, turn face down and cover your head and neck with a pillow.</li>
+                    <li>If you are in a damaged building, go outside and quickly move away from the building. And Do not
+                        enter
+                        damaged buildings.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img class="img"
+                    src="https://imgs.search.brave.com/CnTwrFOX6qutYcDylG9k4FkvJCaPhU6FmX2ipBQEKhc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLmd1/aW0uY28udWsvaW1n/L21lZGlhL2QxNGY1/OTcxN2VmOTQ1ZjU2/OTA1NWI4MTc3M2I2/ZTczYzc5NzdkN2Yv/MF8wXzMwMDBfMTk4/MS9tYXN0ZXIvMzAw/MC5qcGc_d2lkdGg9/MzAwJnF1YWxpdHk9/ODUmYXV0bz1mb3Jt/YXQmZml0PW1heCZz/PTI4YTk5Njc3NzA0/Yjk1MWFmMTQxZTE4/MjI4ZDdjMjU1"
+                    alt="Hurricane">
+                <h2>Hurricane</h2>
+                <p>A hurricane is a type of storm called a tropical cyclone, which forms over tropical or subtropical
+                    waters. A
+                    tropical cyclone with winds of 74 miles per hour or greater is usually accompanied by rain,
+                    thunder, and lightning, and sometimes moves into temperate latitudes.</p>
+                <h4>What to do during a Hurricane</h4>
+                <ul>
+                    <li>Avoid driving or going outdoors during a storm. Flooding and damaging winds can make traveling
+                        dangerous.</li>
+                    <li>Stay indoors and away from windows.</li>
+                    <li>Look before you step. After a hurricane or flood, the ground and floors can be covered with
+                        debris,
+                        including broken bottles and nails.</li>
+                    <li>Stay away from downed utility wires. Always assume a downed power line is live.</li>
+                    <li>If your home or property is damaged, take photos or videos to document damage, and contact your
+                        insurance company.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img class="img"
+                    src="https://imgs.search.brave.com/jqFtYwktWaILLdVyZlF19M4Mp3JM0kwVIvCWrWl5pR8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by92/aWV3LXdpbGRmaXJl/LWJ1cm5pbmctbmF0/dXJlXzIzLTIxNTA3/ODkxNDYuanBnP3Np/emU9NjI2JmV4dD1q/cGc"
+                    alt="Wildfire">
+                <h2>Wildfires</h2>
+                <p>Wildfires (also known as bushfires, brush fires, or forest fires) are large, uncontrolled, and
+                    potentially
+                    destructive fires that can affect both rural and urban areas. They can spread quickly, change
+                    direction, and
+                    even 'jump' across large distances when embers and sparks are carried by the wind.</p>
+                <h4>What To Do When Facing a Wildfire</h4>
+                <ul>
+                    <li>Close all windows and doors to prevent smoke from entering your home.</li>
+                    <li>Do not drive unless you’re ordered to evacuate and have your emergency bag ready to go if
+                        needed.</li>
+                    <li>Covering vents, windows, and doors with at least ½ inch thick fire-resistant plywood.</li>
+                    <li>Placing water-filled buckets around your home to extinguish embers or flames.</li>
+                    <li>Moving furniture or flammable materials, including gas grills, away from your home.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img class="img"
+                    src="https://imgs.search.brave.com/JgchTSO7-BTAk8kfCE9v3KxMYyJ-1XRXwFgRBy6cF6k/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5ucHIub3JnL2Fz/c2V0cy9pbWcvMjAy/NC8wNC8xOC9nZXR0/eWltYWdlcy0yMTQ3/ODg0NzY4X2N1c3Rv/bS0wMmViMWIxMmZl/ZWE1Y2QwMzkyZjhi/Y2YwMzg4OGM1Njg5/MzAwNWZlLmpwZz9z/PTExMDAmYz01MCZm/PWpwZWc"
+                    alt="Flood">
+                <h2>Floods</h2>
+                <p>Flooding is an overflow of water that can range from a few inches deep to fully submerging entire
+                    buildings.
+                    It can occur when rivers and lakes cannot contain excessive rain or snow melt, or when rain cannot
+                    be
+                    absorbed fully into the ground. Flooding can also occur when waterways overflow due to debris or
+                    ice, when
+                    winds from tropical storms.</p>
+                <h4>What To Do When Facing a Flood</h4>
+                <ul>
+                    <li>Avoid building in flood-prone areas unless you elevate and reinforce your home.</li>
+                    <li>Consider unplugging sensitive electronic equipment before flooding.</li>
+                    <li>Avoid camping or parking along streams, rivers.These areas can flood rapidly and with little
+                        warning.</li>
+                    <li>If you must evacuate your home, take only essential items.</li>
+                    <li>Do not drive around road barriers. Roads and bridges may be washed out or structurally unsound.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section5"></div>
+        <div class="section6"></div>
+        <div class="section7"></div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+</body>
+
+</html>
