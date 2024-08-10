@@ -9,81 +9,107 @@ const location_not_found = document.querySelector('.location-not-found');
 const weather_body = document.querySelector('.weather-body');
 const showSearchBtn = document.querySelector('#show-search-btn');
 const weatherSearch = document.querySelector('#weather-search');
-const error_message = document.createElement('div');
+const currLocation = document.querySelector('#your-weather');
 
-error_message.style.color = 'red';
-error_message.style.marginTop = '10px';
-weatherSearch.appendChild(error_message);
+function displayError(message) {
+    location_not_found.innerText = message;
+    location_not_found.style.display = "block";
+    weather_body.style.display = "none";
+}
+
+
+function displayWeather(data) {
+    temperature.innerText = `Temperature: ${Math.round(data.main.temp - 273.15)}°C`;
+    description.innerText = data.weather[0].description;
+    humidity.innerText = `Humidity: ${data.main.humidity}%`;
+    wind_speed.innerText = `Wind Speed: ${data.wind.speed} km/h`;
+    weather_img.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    weather_body.style.display = "block";
+    location_not_found.style.display = "none";
+}
+
 
 showSearchBtn.addEventListener('click', () => {
-    weatherSearch.style.display = 'block';
+    weatherSearch.style.display = weatherSearch.style.display === 'none' ? 'block' : 'none';
+
+   
+    weather_body.style.display = "none";
+    location_not_found.style.display = "none";
 });
 
-async function checkWeather(city) {
-    if (city.trim() === "") {
-        error_message.innerText = "Please enter a valid city name!";
-        location_not_found.style.display = "none";
-        weather_body.style.display = "none";
-        return;
-    }
 
+async function checkWeather(city) {
     const api_key = "2e6239f0acfe196c0702010fccb0a3f4";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
 
     try {
-        const weather_data = await fetch(url).then(response => response.json());
+        const response = await fetch(url);
+        const weather_data = await response.json();
 
         if (weather_data.cod === '404') {
-            error_message.innerText = "";
-            location_not_found.style.display = "flex";
-            weather_body.style.display = "none";
-            return;
+            displayError("City not found. Please enter a valid city name.");
+        } else {
+            displayWeather(weather_data);
         }
-
-        error_message.innerText = ""; // Clear the error message if the input is valid
-        location_not_found.style.display = "none";
-        weather_body.style.display = "flex";
-        temperature.innerHTML = `Temperature: ${Math.round(weather_data.main.temp - 273.15)}°C`;
-        description.innerHTML = weather_data.weather[0].description;
-        humidity.innerHTML = `Humidity: ${weather_data.main.humidity}%`;
-        wind_speed.innerHTML = `Wind speed: ${weather_data.wind.speed} km/h`;
-
-        document.body.className = ''; // Clear previous classes
-        switch (weather_data.weather[0].main.toLowerCase()) {
-            case 'clouds':
-                weather_img.src = "../images/cloud.png";
-                document.body.classList.add('clouds');
-                break;
-            case 'clear':
-                weather_img.src = "../images/clear.png";
-                document.body.classList.add('clear');
-                break;
-            case 'rain':
-                weather_img.src = "../images/rain.png";
-                document.body.classList.add('rain');
-                break;
-            case 'mist':
-                weather_img.src = "../images/mist.png";
-                document.body.classList.add('mist');
-                break;
-            case 'snow':
-                weather_img.src = "../images/snow.png";
-                document.body.classList.add('snow');
-                break;
-            default:
-                weather_img.src = "../images/404.png";
-                document.body.classList.add('p404');
-                break;
-        }
-
     } catch (error) {
         console.error("Error fetching the weather data:", error);
-        error_message.innerText = "Unable to retrieve weather data. Please try again later.";
-        location_not_found.style.display = "none";
-        weather_body.style.display = "none";
+        displayError("Unable to retrieve weather data. Please try again later.");
     }
 }
 
+
 searchbtn.addEventListener('click', () => {
-    checkWeather(inputbox.value);
+    const city = inputbox.value.trim();
+    if (city === "") {
+        displayError("Please enter a valid city name!");
+    } else {
+        checkWeather(city);
+    }
+});
+
+
+inputbox.addEventListener('keydown', (event) => {
+    if (event.key === "Enter") {
+        const city = inputbox.value.trim();
+        if (city === "") {
+            displayError("Please enter a valid city name!");
+        } else {
+            checkWeather(city);
+        }
+    }
+});
+
+
+async function getData(lat, long) {
+    const api_key = "2e6239f0acfe196c0702010fccb0a3f4"; 
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${api_key}`;
+
+    try {
+        const response = await fetch(url);
+        const weather_data = await response.json();
+        console.log('Weather data:', weather_data); 
+        displayWeather(weather_data);
+    } catch (error) {
+        console.error("Error fetching the weather data:", error);
+        displayError("Unable to retrieve weather data. Please try again later.");
+    }
+}
+
+function getLocation(position) {
+    const { latitude, longitude } = position.coords;
+    console.log('Location coordinates:', latitude, longitude); 
+    getData(latitude, longitude);
+}
+
+function failedToGet() {
+    displayError("Failed to retrieve your location. Please try again later.");
+}
+
+currLocation.addEventListener('click', () => {
+   
+    weatherSearch.style.display = 'none';
+    location_not_found.style.display = "none";
+
+    
+    navigator.geolocation.getCurrentPosition(getLocation, failedToGet);
 });
