@@ -7,39 +7,58 @@ body {
     height: 100vh;
     /* width: 100vw; */
     color: white;
-    background: linear-gradient(to right, #02B1BC,#78EAF4,#78EAF4,#78EAF4,#02B1BC);
+    background: linear-gradient(to right, #02B1BC, #78EAF4, #78EAF4, #78EAF4, #02B1BC);
     /* scrollbar-color: blue; */
 }
+
 body {
-    scrollbar-width: thin; /* Optional: Adjust scrollbar thickness */
+    scrollbar-width: thin;
+    /* Optional: Adjust scrollbar thickness */
     scrollbar-color: #78EAF4 #02B1BC;
-  }
-  
-  /* Fallback for older browsers */
-  ::-webkit-scrollbar {
-    width: 12px; /* For vertical scrollbars */
-    height: 12px; /* For horizontal scrollbars */
-    
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+#loader{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    z-index: 10000;
+    top: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loader h1{
+    font-size: 70px;
+}
+#loader h1 span{
+    display: inline-block;
+}
+/* Fallback for older browsers */
+::-webkit-scrollbar {
+    width: 12px;
+    /* For vertical scrollbars */
+    height: 12px;
+    /* For horizontal scrollbars */
+
+}
+
+::-webkit-scrollbar-thumb {
     background-color: #78EAF4;
     border-radius: 50px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: #ffffff52;
-  }
-  
-main{
-    margin-top: 10vh;
 }
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff52;
+}
+
+main {
+    margin-top: 0vh;
+}
+
 nav {
     height: 10vh;
-    width: 100vw;
+    width: 100%;
     background-color: #333;
-    padding-left: 0vh;
-    padding-right: 20vh;
     overflow: hidden;
     display: flex;
     justify-content: space-around;
@@ -83,7 +102,7 @@ nav .menu li a:hover {
 
 .section1 {
     position: relative;
-    height: 60vh;
+    height: 70vh;
     /* width: 100%; */
     background-image: url(../images/wildfire.jpg);
     filter: opacity(1);
@@ -93,38 +112,40 @@ nav .menu li a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 0;
 }
-.section1 h1{
+
+.section1 h1 {
     /* position: absolute; */
     font-size: 7vh;
     margin-bottom: 3vh;
     z-index: 10;
 }
-.blackscreen{
+
+.blackscreen {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.285);
     position: absolute;
     z-index: -1;
 }
-.section1 p{
+
+.section1 p {
     z-index: 10;
     /* position: absolute; */
     font-size: 3vh;
 }
+
 /* Weather Section Styling */
 .weather-container {
-    height: 55vh;
-    /* width: 100%; */
+    height: 60vh;
+    top: 10vh;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 20px;
     text-align: center;
-    /* background-color: #ffffff00; */
-    /* border-radius: 10px; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .weather-container h2 {
@@ -134,28 +155,34 @@ nav .menu li a:hover {
 }
 
 .weather1 {
-    padding: 30px 50px;
+    padding: 25px 40px;
     font-size: 16px;
-    background-color: #ffffff;
-    color: #000000;
+    background: linear-gradient(45deg, rgba(255, 255, 0, 0.737), rgba(255, 166, 0, 0.838));
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 2vh;
+    font-weight: 600;
 }
 
-.container-2{
+.weather1:hover {
+    background: linear-gradient(45deg, rgb(255, 255, 0), rgb(255, 166, 0));
+}
+
+.container-2 {
     margin-left: 9vw;
     width: 60%;
     height: 20vh;
     background-color: #fff;
-    color: #000000;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.weather-body{
+.weather-body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,7 +190,7 @@ nav .menu li a:hover {
 
 
 #show-search-btn:hover {
-    background-color: #989898;
+    background: linear-gradient(45deg, rgb(255, 255, 0), rgb(255, 166, 0));
 }
 
 .weather-search {
@@ -178,13 +205,14 @@ nav .menu li a:hover {
     border-radius: 5px;
 }
 
-#name{
+#name {
     color: #333;
 }
+
 #searchbtn {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #2196F3;
+    background-color: #02B1BC;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -192,7 +220,7 @@ nav .menu li a:hover {
 }
 
 #searchbtn:hover {
-    background-color: #0b7dda;
+    background-color: #00939d;
 }
 
 .location-not-found {
@@ -224,11 +252,9 @@ nav .menu li a:hover {
     color: #555;
 }
 
-/* Weather condition specific background images */
-.section2 {
-    background-image: url('default_bg.jpg');
-    background-size: cover;
-    background-position: center;
+.container-2 {
+    border-radius: 10px;
+    background: radial-gradient(#78EAF4, #02B1BC);
 }
 
 .section2.clear {
@@ -250,20 +276,51 @@ nav .menu li a:hover {
 .section2.snow {
     background-image: url('../images/snow.png');
 }
+
 .section2.p404 {
     background-image: url('../images/404.png');
 }
-.section3{
-    height: 55vh;
-    /* width: 100%; */
-    /* background-color: red; */
+
+.section3 {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
-.section4{
+
+.section3 h1 {
+    text-align: center;
+    font-size: 6vh;
+}
+
+.section3 p {
+    font-size: 1.1rem;
+}
+
+.alert {
+    padding: 10px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+}
+
+.alert-warning {
+    background-color: rgb(255, 0, 0);
+}
+
+.alert-info {
+    background-color: rgb(0, 0, 255);
+}
+
+.section4 {
     height: 55vh;
     /* width: 100%; */
     /* background-color: rgb(18, 125, 41); */
 }
-.section5{
+
+.section5 {
     height: 70vh;
     width: 100%;
     /* background-color: rgb(246, 255, 0); */
@@ -271,17 +328,19 @@ nav .menu li a:hover {
     font-size: 1.2rem;
     overflow-x: hidden;
 }
-.card-grid{
+
+.card-grid {
     display: inline-flex;
     gap: 20px;
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
 }
-.insight-card{
+
+.insight-card {
     margin-top: 2vh;
     /* background-color: rgb(84, 132, 140);  */
-    background: radial-gradient(#78EAF4,#02B1BC);    
+    background: radial-gradient(#78EAF4, #02B1BC);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -290,44 +349,90 @@ nav .menu li a:hover {
     font-size: 2.5vh;
     transition: transform 0.5s ease-in-out;
 }
-.insight-card:hover{
+
+.insight-card:hover {
     transform: scale(1.05);
     background: rgba(0, 0, 0, 0.409);
 }
-.insight-card h3{
+
+.insight-card h3 {
     text-align: center;
     margin-bottom: 15px;
     font-weight: 900;
 }
-.insight-card p{
+
+.insight-card p {
     font-weight: 100;
 }
-.section6{
+
+.section6 {
     height: 55vh;
-    /* width: 100%; */
-    background-color: red;
-}
-.section7{
-    height: 55vh;
-    /* width: 100%; */
-    background-color: rgb(0, 179, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vh;
 }
 
+.section7 {
+    height: 70vh;
+}
 
-.education{
+#resources h2 {
+    font-size: 6vh;
+    text-align: center;
+}
+
+#resources .p {
+    font-size: 3vh;
+    text-align: center;
+}
+
+.resources-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 5vh;
+}
+
+.resources-card {
+    background: linear-gradient(0deg, #02B1BC, #78EAF4);
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 35vh;
+    width: 35vh;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 5vh;
+    border-radius: 10px;
+}
+
+.resources-card h3 {
+    font-size: 3.5vh;
+}
+
+.resources-card p {
+    font-size: 2.5vh;
+}
+
+.education {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 4vh;
     margin-bottom: 10vh;
 }
-.infoup h2{
+
+.infoup h2 {
     text-align: center;
     font-size: 7vh;
     height: 10vh;
     margin-bottom: 7vh;
 }
-.section4{
+
+.section4 {
     height: 100%;
     width: 100%;
     display: flex;
@@ -339,26 +444,28 @@ nav .menu li a:hover {
 
 .card {
     margin-top: 2vh;
-    background: radial-gradient(#78EAF4,#02B1BC); 
+    background: radial-gradient(#78EAF4, #02B1BC);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    min-width: 300px;
-    height: 125vh;
+    min-width: 600px;
+    height: 100vh;
     text-align: left;
     box-sizing: border-box;
     display: inline-block;
     transition: transform 0.5s ease-in-out;
 }
-.card:hover{
+
+.card:hover {
     background: rgba(0, 0, 0, 0.409);
     transform: scale(1.03);
 }
 
 .card img {
-    width: 100%; 
-    border-radius: 10px ; 
-    margin-bottom: 15px; 
+    width: 100%;
+    height: 40vh;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .card h2 {
@@ -375,17 +482,67 @@ nav .menu li a:hover {
     margin-bottom: 10px;
 }
 
-.img{
-    height:200px;
-    width:200px;
+.img {
+    height: 200px;
+    width: 200px;
 }
-footer{
+
+footer {
     height: 20vh;
     /* width: 100%; */
-    background-color: black;
+    background-color: #333;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 10px;
     text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.menu__item {
+    list-style: none;
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 1;
+    font-weight: 300;
+}
+#contact-form { 
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form input, #contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    width: fit-content;
 }
