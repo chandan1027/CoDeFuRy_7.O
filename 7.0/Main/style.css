@@ -7,23 +7,46 @@ body {
     height: 100vh;
     /* width: 100vw; */
     color: white;
-    background: linear-gradient(to right, #02B1BC,#78EAF4,#78EAF4,#02B1BC);
+    background: linear-gradient(to right, #02B1BC,#78EAF4,#78EAF4,#78EAF4,#02B1BC);
+    /* scrollbar-color: blue; */
 }
+body {
+    scrollbar-width: thin; /* Optional: Adjust scrollbar thickness */
+    scrollbar-color: #78EAF4 #02B1BC;
+  }
+  
+  /* Fallback for older browsers */
+  ::-webkit-scrollbar {
+    width: 12px; /* For vertical scrollbars */
+    height: 12px; /* For horizontal scrollbars */
+    
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #78EAF4;
+    border-radius: 50px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #ffffff52;
+  }
+  
 main{
-    top: -15vh;
+    margin-top: 10vh;
 }
 nav {
     height: 10vh;
-    /* width: 100vw; */
+    width: 100vw;
     background-color: #333;
-    padding-left: 20vh;
+    padding-left: 0vh;
     padding-right: 20vh;
     overflow: hidden;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
+    z-index: 1000;
 }
 
 nav .heading h1 {
@@ -59,9 +82,11 @@ nav .menu li a:hover {
 }
 
 .section1 {
-    height: 55vh;
+    position: relative;
+    height: 60vh;
     /* width: 100%; */
     background-image: url(../images/wildfire.jpg);
+    filter: opacity(1);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -70,9 +95,21 @@ nav .menu li a:hover {
     text-align: center;
 }
 .section1 h1{
+    /* position: absolute; */
     font-size: 7vh;
+    margin-bottom: 3vh;
+    z-index: 10;
+}
+.blackscreen{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.285);
+    position: absolute;
+    z-index: -1;
 }
 .section1 p{
+    z-index: 10;
+    /* position: absolute; */
     font-size: 3vh;
 }
 /* Weather Section Styling */
@@ -96,8 +133,8 @@ nav .menu li a:hover {
     margin-bottom: 20px;
 }
 
-#show-search-btn {
-    padding: 10px 20px;
+.weather1 {
+    padding: 30px 50px;
     font-size: 16px;
     background-color: #ffffff;
     color: #000000;
@@ -105,6 +142,25 @@ nav .menu li a:hover {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.container-2{
+    margin-left: 9vw;
+    width: 60%;
+    height: 20vh;
+    background-color: #fff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.weather-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 #show-search-btn:hover {
     background-color: #989898;
@@ -122,6 +178,9 @@ nav .menu li a:hover {
     border-radius: 5px;
 }
 
+#name{
+    color: #333;
+}
 #searchbtn {
     padding: 10px 20px;
     font-size: 16px;
@@ -205,9 +264,43 @@ nav .menu li a:hover {
     /* background-color: rgb(18, 125, 41); */
 }
 .section5{
-    height: 55vh;
-    /* width: 100%; */
-    background-color: rgb(246, 255, 0);
+    height: 70vh;
+    width: 100%;
+    /* background-color: rgb(246, 255, 0); */
+    display: flex;
+    font-size: 1.2rem;
+    overflow-x: hidden;
+}
+.card-grid{
+    display: inline-flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.insight-card{
+    margin-top: 2vh;
+    /* background-color: rgb(84, 132, 140);  */
+    background: radial-gradient(#78EAF4,#02B1BC);    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 50vh;
+    width: 50vh;
+    font-size: 2.5vh;
+    transition: transform 0.5s ease-in-out;
+}
+.insight-card:hover{
+    transform: scale(1.05);
+    background: rgba(0, 0, 0, 0.409);
+}
+.insight-card h3{
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+.insight-card p{
+    font-weight: 100;
 }
 .section6{
     height: 55vh;
@@ -219,41 +312,47 @@ nav .menu li a:hover {
     /* width: 100%; */
     background-color: rgb(0, 179, 255);
 }
-footer{
-    height: 20vh;
-    /* width: 100%; */
-    background-color: black
-}
 
-.section4 {
-    /* background-image: url("https://img.freepik.com/free-photo/wildfire-its-consequences-nature_23-2151099456.jpg?t=st=1723281679~exp=1723285279~hmac=c55a539f6d681695cd60c1518f22ff6f8ec98a45e885baa478e4d8df636e1d0d&w=740"); */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* background-color: rgba(35, 33, 33, 0.8); */
-    /* background-blend-mode: overlay; */
-    height: 100%;
-    margin: 0;
-    padding: 20px;
-    font-size: 1.2em;
-    color: white;
+
+.education{
     display: flex;
-    justify-content: center; 
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 4vh;
+    margin-bottom: 10vh;
+}
+.infoup h2{
+    text-align: center;
+    font-size: 7vh;
+    height: 10vh;
+    margin-bottom: 7vh;
+}
+.section4{
+    height: 100%;
+    width: 100%;
+    display: flex;
     gap: 20px;
-    box-sizing: border-box;
-    min-height: 100vh; 
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    padding-bottom: 7vh;
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.1); 
+    margin-top: 2vh;
+    background: radial-gradient(#78EAF4,#02B1BC); 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    min-width: 300px;
     height: 125vh;
     text-align: left;
     box-sizing: border-box;
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+}
+.card:hover{
+    background: rgba(0, 0, 0, 0.409);
+    transform: scale(1.03);
 }
 
 .card img {
@@ -279,5 +378,14 @@ footer{
 .img{
     height:200px;
     width:200px;
-
+}
+footer{
+    height: 20vh;
+    /* width: 100%; */
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    text-align: center;
 }
