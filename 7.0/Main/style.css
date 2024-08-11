@@ -323,7 +323,6 @@ nav .menu li a:hover {
 .section5 {
     height: 70vh;
     width: 100%;
-    /* background-color: rgb(246, 255, 0); */
     display: flex;
     font-size: 1.2rem;
     overflow-x: hidden;
@@ -336,10 +335,8 @@ nav .menu li a:hover {
     justify-content: space-evenly;
     height: 100%;
 }
-
 .insight-card {
     margin-top: 2vh;
-    /* background-color: rgb(84, 132, 140);  */
     background: radial-gradient(#78EAF4, #02B1BC);
     padding: 20px;
     border-radius: 10px;
@@ -435,8 +432,10 @@ nav .menu li a:hover {
 .section4 {
     height: 100%;
     width: 100%;
-    display: flex;
-    gap: 20px;
+    /* display: flex; */
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
     overflow-x: hidden;
     font-size: 1.2rem;
     padding-bottom: 7vh;
@@ -448,14 +447,17 @@ nav .menu li a:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    min-width: 600px;
+    width: 600px;
     height: 100vh;
     text-align: left;
-    box-sizing: border-box;
     display: inline-block;
     transition: transform 0.5s ease-in-out;
 }
-
+.card1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .card:hover {
     background: rgba(0, 0, 0, 0.409);
     transform: scale(1.03);
@@ -534,15 +536,29 @@ footer {
 #contact-form { 
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 #contact-form input, #contact-form textarea {
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
 }
-
-#contact-form button {
+#communication{
+    text-align: center;
+}
+#communication p{
+    font-size: 3vh;
+}
+#contact-form button{
+    padding: 1vh;
+    border-radius: 10px;
+    background-color: #3498db;
+    color: white;
     width: fit-content;
+    border-color: rgba(255, 0, 0, 0);
+}
+#contact-form button:hover{
+    background-color: #246896;
 }
