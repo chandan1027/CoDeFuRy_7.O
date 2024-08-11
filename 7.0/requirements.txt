@@ -5,3 +5,11 @@ bcrypt==4.0.1
 Flask-SocketIO==5.3.5
 python-socketio==5.8.0
 eventlet==0.33.3
+Flask-SQLAlchemy  # Assuming you're using SQLAlchemy for database access
+sqlalchemy  # Optional, if you're not using Flask-SQLAlchemy
+
+# Optional dependencies based on templates
+Jinja2  # Likely already installed with Flask
+
+# Testing dependencies (if applicable)
+pytest  # Example testing framework
