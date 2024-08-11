@@ -43,3 +43,16 @@ gsap.to("#loader", {
     duration: 2,
     delay:2
 })
+
+var t2=gsap.timeline();
+
+t2.to("#disaster-insights",{
+    x:-1000,
+    scrollTrigger: {
+        trigger: "#infohub",
+        scroller:"body",
+        start:"top 10%",
+        scrub:3,
+        pin:true
+    }
+})
